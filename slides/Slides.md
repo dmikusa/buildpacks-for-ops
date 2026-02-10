@@ -30,10 +30,10 @@ paginate    : true
 
 <!-- 
 _class: titlepage
-_footer: Photo by <a href="https://unsplash.com/@nosaka?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">nikko osaka</a> on <a href="https://unsplash.com/photos/brown-and-red-shipping-containers-WzZjyThDoR8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+_footer: Photo by <a href="https://unsplash.com/@michelebit_?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Michele Bitetto</a> on <a href="https://unsplash.com/photos/yellow-curtained-glass-building-84ZA1jFsfzM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 _paginate: false
 -->
-![bg left:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/nikko-osaka-WzZjyThDoR8-unsplash.jpg)
+![bg left:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/michele-bitetto-84ZA1jFsfzM-unsplash.jpg)
 
 # Buildpacks for Ops Teams
 
@@ -98,19 +98,6 @@ Slides are available at the link above.
 ---
 
 # Why are we here today?
-
-<!--
-To talk about containers!
-
-Poll:
-- Who's using containers?
-- Who's doing the bare minimum to get containers into prod?
-- Who's a container expert?
-
-It's common. Many devs use containers to get a job done, but don't really understand them. It's easy enough to copy & paste, get the job done, and move on. Especially when you're busy writing code.
-
-Today's a chance to fix that.
--->
 
 ---
 
