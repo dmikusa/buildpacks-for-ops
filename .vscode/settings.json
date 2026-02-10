@@ -1,0 +1,19 @@
+{
+    "markdown.marp.themes": [
+        "slides/themes/dracula.css",
+        "slides/themes/neobeam.css",
+        "slides/themes/neobeam-lund.css",
+        "slides/themes/neobeam-dsek.css",
+        "slides/themes/neobeam-csek.css",
+        "slides/themes/neobeam-beamer.css",
+        "slides/themes/jobs.css",
+        "slides/themes/king.css",
+        "slides/themes/einstein.css",
+        "slides/themes/arendt.css",
+        "slides/themes/copernicus.css",
+        "slides/themes/simple.css",
+        "slides/themes/descartes.css",
+        "slides/themes/freud.css",
+        "slides/themes/godel.css"
+    ]
+}
