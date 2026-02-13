@@ -256,16 +256,29 @@ The great thing about Buildpacks is that you don't have to hope. The buildpack a
 
 # Why should Ops care?
 
+<!-- 
+_footer: Photo by <a href="https://unsplash.com/@cytonn_photography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cytonn Photography</a> on <a href="https://unsplash.com/photos/two-people-shaking-hands-n95VMLxqM2I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+-->
+
+![bg left:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/cytonn-photography-n95VMLxqM2I-unsplash.jpg)
+
+<div>&nbsp;</div>
+
 ## App Problems == Ops Problems
 
 <!--
-# TODO: add graphic
 The app team might write the Dockerfile, but the Ops teams are running these images or are running the platforms running these apps. When there are vulnerabilities or problems with the app, it's often the Ops teams that have to step in and help.
 -->
 
 ---
 
 # How can Buildpacks Help Ops
+
+<!-- 
+_footer: Photo by <a href="https://unsplash.com/@thevictorbarrios?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Victor Barrios</a> on <a href="https://unsplash.com/photos/black-mixing-console-hip8AwIPK9Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+-->
+
+![bg right:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/victor-barrios-hip8AwIPK9Y-unsplash.jpg)
 
 1. Ops gets control
 
@@ -276,6 +289,12 @@ There's no more Dockerfile, so no more mess. Builds are done in a unified way, a
 ---
 
 # How can Buildpacks Help Ops
+
+<!-- 
+_footer: Photo by <a href="https://unsplash.com/@luvqs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lucas Vasques</a> on <a href="https://unsplash.com/photos/man-sight-on-white-microscope-9vnACvX2748?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+-->
+
+![bg left:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/lucas-vasques-9vnACvX2748-unsplash.jpg)
 
 1. Ops gets control
 2. Know what's running
@@ -288,6 +307,12 @@ In addition, buildpack builds are reproducible. If there's ever a question about
 
 ---
 
+<!-- 
+_footer: Photo by <a href="https://unsplash.com/@taopaodao?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">taopaodao</a> on <a href="https://unsplash.com/photos/blue-yellow-and-red-abstract-art-EgL0EtzL0Wc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+-->
+
+![bg right:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/taopaodao-EgL0EtzL0Wc-unsplash.jpg)
+
 # How can Buildpacks Help Ops
 
 1. Ops gets control
@@ -299,6 +324,12 @@ Buildpacks are more than just a way to create images, they're a way to allow Ops
 -->
 
 ---
+
+<!-- 
+_footer: Photo by <a href="https://unsplash.com/@jetjetdelacruz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">jet dela cruz</a> on <a href="https://unsplash.com/photos/time-lapse-photography-of-cars-on-road-during-night-time-xzLKOczi4As?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+-->
+
+![bg left:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/jet-dela-cruz-xzLKOczi4As-unsplash.jpg)
 
 # How can Buildpacks Help Ops
 
@@ -320,6 +351,12 @@ If you're building a platform, rebase is huge because you can confidently patch 
 ---
 
 # How can Buildpacks Help Ops
+
+<!-- 
+_footer: Photo by <a href="https://unsplash.com/@sonereker?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Soner Eker</a> on <a href="https://unsplash.com/photos/beige-red-and-brown-signages-on-beige-stand-at-daytime-jhtPCeQ2mMU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+-->
+
+![bg left:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/soner-eker-jhtPCeQ2mMU-unsplash.jpg)
 
 1. Ops gets control
 2. Know what's running
