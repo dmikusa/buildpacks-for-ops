@@ -367,6 +367,20 @@ If you're building a platform, rebase is huge because you can confidently patch 
 
 ---
 
+# Rebase Explained
+
+<div style="padding-left: 6.5em">
+
+![drop-shadow width:23em](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/rebase.svg)
+
+</div>
+
+<!--
+A picture is worth a thousand words. This is how rebase works. The run image layer is the lowest layer in your app image. The `pack rebase` command looks for a newer run image layer, and upon finding one surgically swaps out just that lower layer, producing a new app image that is includes the new run image layer.
+-->
+
+---
+
 # How can Buildpacks Help Ops
 
 <!-- 
@@ -396,27 +410,47 @@ In addition, buildpacks support multiple architectures, so you can build app ima
 
 # Levels of Customization
 
-Out-of-the-box: Paketo Buildpacks
+<div style="margin-top: 2em;">
 
-- Base images: Ubuntu Jammy and Noble or UBI 8-10
-- Four run image sizes: static, tiny, base & full*
-- Languages: Java, Java Native Image, Go, .NET, Node.js, Python, Ruby, Rust, and web servers.
-- Buildpack-less builders as well
+## None
+
+- Base images: <span style="font-family: San Francisco bold">Ubuntu Jammy</span>, <span style="font-family: San Francisco bold">Ubuntu Noble</span>, or <span style="font-family: San Francisco bold">UBI 8-10</span>
+- Four run image sizes: <span style="font-family: San Francisco bold">static, tiny, base & full</span>
+- Languages: <span style="font-family: San Francisco bold">Java, Java Native Image, Go, .NET, Node.js, Python, Ruby, Rust, & web servers</span>
+- Buildpack-less builders too
+
+</div>
+
+<div style="position: absolute; top: 250px; right: 100px; z-index: 10;">
+
+![drop-shadow width:7em](https://paketo.io/v2/images/logo-paketo-dark.svg)
+
+</div>
 
 <!--
-Buildpacks can be customized in a number of ways to fit your needs, but let's cover what you get out-of-the-box without any customization.
+Buildpacks can be customized in a number of ways to fit your needs, but let's start by covering what you get out-of-the-box without any customization, simply by using the Paketo Buildpacks implementation.
 -->
 
 ---
 
 # Levels of Customization
 
-Custom Builders:
+<div class="columns">
+<div class="column">
+
+## Custom Builders
 
 - Build image
 - Run image
 - Set of buildpacks
 - Optional custom env variables
+
+</div>
+<div class="column">
+
+![drop-shadow width:10em](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/builder.png)
+
+</div>
 
 <!--
 This is the first level of customization. A builder is a base image + run image + buildpacks + metadata. This level of customization allow you to make your own collection for your company.
