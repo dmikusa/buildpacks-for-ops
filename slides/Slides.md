@@ -436,7 +436,7 @@ Buildpacks can be customized in a number of ways to fit your needs, but let's st
 # Levels of Customization
 
 <div class="columns">
-<div class="column">
+<div class="column" style="margin-top: 1em;">
 
 ## Custom Builders
 
@@ -446,9 +446,9 @@ Buildpacks can be customized in a number of ways to fit your needs, but let's st
 - Optional custom env variables
 
 </div>
-<div class="column">
+<div class="column" style="margin-top: 2em;">
 
-![drop-shadow width:10em](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/builder.png)
+![drop-shadow](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/builder.png)
 
 </div>
 
@@ -456,14 +456,25 @@ Buildpacks can be customized in a number of ways to fit your needs, but let's st
 This is the first level of customization. A builder is a base image + run image + buildpacks + metadata. This level of customization allow you to make your own collection for your company.
 
 For example, if you only do Java and you prefer a RedHat base, then you can make a builder with UBI9 build/run images and just two buildpacks, Java & Java Native Image.
-
-// TODO: image of using a custom builder
 -->
+
 ---
 
 # Levels of Customization
 
-Custom Paketo Run Image
+<div class="columns">
+<div class="column" style="margin-top: 1em;">
+
+## Custom Run Image
+
+![drop-shadow](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/run-image.png)
+
+</div>
+<div class="column" style="margin-top: 2em;">
+
+![drop-shadow](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/app-image.png)
+
+</div>
 
 <!--
 The next level is a custom Paketo run image. Let's say you need some additional packages for your apps or you need to add some CA certs, so create a Dockerfile and base from your Paketo run image of choice. You can then add customize it, build and publish to a registry.
