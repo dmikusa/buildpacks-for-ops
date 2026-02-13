@@ -180,7 +180,13 @@ Technically:
 
 </div>
 
+
 ---
+<!-- 
+_footer: Photo by <a href="https://unsplash.com/@punttim?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tim Gouw</a> on <a href="https://unsplash.com/photos/man-wearing-white-top-using-macbook-1K9T5YiZ2WU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+-->
+
+![bg right:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/tim-gouw-1K9T5YiZ2WU-unsplash.jpg)
 
 # Problems Solved: Dockerfiles
 
