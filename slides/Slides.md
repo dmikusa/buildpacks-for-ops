@@ -26,6 +26,9 @@ paginate    : true
     margin-left: auto;
     margin-right: auto;
 }
+.margin3 {
+    margin-top: 3em;
+}
 </style>
 
 <!-- 
@@ -99,7 +102,7 @@ Slides are available at the link above.
 
 # Why are we here today?
 
-<div class="columns" style="margin-top: 3em;">
+<div class="columns margin3">
 <div class="column">
 
 1. A Quick primer
@@ -163,7 +166,7 @@ What they are not:
 
 # What are Cloud Native Buildpacks?
 
-<div class="columns">
+<div class="columns" style="margin-top: 1.5em">
 <div class="column">
 
 Technically:
@@ -175,7 +178,11 @@ Technically:
 </div>
 <div class="column">
 
-![drop-shadow width:10em](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/buildpack-contents.png)
+<div style="margin-top: 1.5em">
+
+![drop-shadow](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/buildpack-contents.png)
+
+</div>
 
 
 </div>
