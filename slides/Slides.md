@@ -29,6 +29,9 @@ paginate    : true
 .margin3 {
     margin-top: 3em;
 }
+.bold-selected li:last-child {
+  font-family: 'San Francisco bold';
+}
 </style>
 
 <!-- 
@@ -280,7 +283,11 @@ _footer: Photo by <a href="https://unsplash.com/@thevictorbarrios?utm_source=uns
 
 ![bg right:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/victor-barrios-hip8AwIPK9Y-unsplash.jpg)
 
+<div class="bold-selected">
+
 1. Ops gets control
+
+</div>
 
 <!--
 There's no more Dockerfile, so no more mess. Builds are done in a unified way, according to your designs. You define the base images, you define the buildpacks, the tools run and produce safe, consistent images.
@@ -296,8 +303,12 @@ _footer: Photo by <a href="https://unsplash.com/@luvqs?utm_source=unsplash&utm_m
 
 ![bg left:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/lucas-vasques-9vnACvX2748-unsplash.jpg)
 
+<div class="bold-selected">
+
 1. Ops gets control
 2. Know what's running
+
+</div>
 
 <!--
 Buildpack generated images automatically have SBOMs created for them by default, so you know what's in the image and what's running.
@@ -315,9 +326,13 @@ _footer: Photo by <a href="https://unsplash.com/@taopaodao?utm_source=unsplash&u
 
 # How can Buildpacks Help Ops
 
+<div class="bold-selected">
+
 1. Ops gets control
 2. Know what's running
 3. Building a Platform
+
+</div>
 
 <!--
 Buildpacks are more than just a way to create images, they're a way to allow Ops teams to provide an almost PaaS-like platform to their Dev teams. This is a win-win and makes life easier for both teams.
@@ -333,10 +348,14 @@ _footer: Photo by <a href="https://unsplash.com/@jetjetdelacruz?utm_source=unspl
 
 # How can Buildpacks Help Ops
 
+<div class="bold-selected">
+
 1. Ops gets control
 2. Know what's running
 3. Building a Platform
 4. Fast rebuilds & rebase support
+
+</div>
 
 <!--
 Buildpacks efficiently cache build metadata, and allow for very quick rebuilds of applications.
@@ -344,8 +363,6 @@ Buildpacks efficiently cache build metadata, and allow for very quick rebuilds o
 If that's not fast enough though, buildpacks support the ability to rebase images. When there are OS updates to your base image, this allows you to efficiently swap out the base layer of your application images with a new, updated base layer in a fraction of the time for a rebuild.
 
 If you're building a platform, rebase is huge because you can confidently patch applications en masse when that next CVE strikes.
-
-//TODO: graphic for rebase
 -->
 
 ---
@@ -356,13 +373,18 @@ If you're building a platform, rebase is huge because you can confidently patch 
 _footer: Photo by <a href="https://unsplash.com/@sonereker?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Soner Eker</a> on <a href="https://unsplash.com/photos/beige-red-and-brown-signages-on-beige-stand-at-daytime-jhtPCeQ2mMU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 -->
 
-![bg left:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/soner-eker-jhtPCeQ2mMU-unsplash.jpg)
+![bg right:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/soner-eker-jhtPCeQ2mMU-unsplash.jpg)
+
+<div class="bold-selected">
 
 1. Ops gets control
 2. Know what's running
 3. Building a Platform
 4. Fast rebuilds & rebase support
-5. Buildpacks are multi-language & multi-arch
+5. Buildpacks are multi-language
+ & multi-arch
+
+</div>
 
 <!--
 Buildpacks are a language agnostic tool, so you can find buildpacks to support many different languages and even create your own. Dev teams don't need to worry, they just initiate a build and the buildpacks handle all the language specifics.
