@@ -627,7 +627,7 @@ Some companies may not allow internet access at all, or certain parts of the com
 _footer: Photo by <a href="https://unsplash.com/@silverkblack?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vitaly Gariev</a> on <a href="https://unsplash.com/photos/a-man-and-a-woman-high-fiving-each-other-in-front-of-a-laptop-V1MU7K8aPwU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 -->
 
-![bg left:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/vitaly-gariev-V1MU7K8aPwU-unsplash.jpg)
+![bg left:50%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/vitaly-gariev-V1MU7K8aPwU-unsplash.jpg)
 
 # Summary
 
@@ -638,7 +638,11 @@ Buildpacks are...
 - Everyone can be happy
 
 <!--
-// TODO: summary
+Cloud Native Buildpacks offer a powerful solution to a persistent challenges in software organizations: the tension between developer productivity and operational security. Too often, Ops teams find themselves in the difficult position of locking down tools and restricting developer choices to maintain security standards. That causes developers to feel hampered and less productive because of those constraints. 
+
+Buildpacks break this cycle by giving Ops teams the control they need, standardized builds, comprehensive SBOMs, reproducible images, and efficient patching through rebase, while simultaneously keeping the developer experience simple and friction-free.
+
+The result is a genuine win-win, both teams getting want they want. Everyone lives happily ever after.
 -->
 
 ---
