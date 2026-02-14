@@ -604,7 +604,7 @@ The only note with this last approach is that you will need to publish directly 
 _footer: Photo by <a href="https://unsplash.com/@seanpollock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sean Pollock</a> on <a href="https://unsplash.com/photos/low-angle-photo-of-city-high-rise-buildings-during-daytime-PhYq704ffdA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 -->
 
-![bg left:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/sean-pollock-PhYq704ffdA-unsplash.jpg)
+![bg right:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/sean-pollock-PhYq704ffdA-unsplash.jpg)
 
 # Enterprise Ready
 
@@ -623,11 +623,19 @@ Some companies may not allow internet access at all, or certain parts of the com
 
 ---
 
+<!-- 
+_footer: Photo by <a href="https://unsplash.com/@silverkblack?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vitaly Gariev</a> on <a href="https://unsplash.com/photos/a-man-and-a-woman-high-fiving-each-other-in-front-of-a-laptop-V1MU7K8aPwU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+-->
+
+![bg left:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/vitaly-gariev-V1MU7K8aPwU-unsplash.jpg)
+
 # Summary
+
+Buildpacks are...
 
 - Great for Ops Teams
 - Great for Dev Teams
-- Everyone can is happy
+- Everyone can be happy
 
 <!--
 // TODO: summary
