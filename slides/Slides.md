@@ -187,7 +187,6 @@ Technically:
 
 </div>
 
-
 </div>
 
 
@@ -462,59 +461,101 @@ For example, if you only do Java and you prefer a RedHat base, then you can make
 
 # Levels of Customization
 
-<div class="columns">
-<div class="column" style="margin-top: 1em;">
+## Custom Paketo Run Image
 
-## Custom Run Image
-
-![drop-shadow](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/run-image.png)
-
-</div>
-<div class="column" style="margin-top: 2em;">
-
-![drop-shadow](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/app-image.png)
-
-</div>
+- Add more packages
+- Add CA certs
+- Customize the OS layer
 
 <!--
-The next level is a custom Paketo run image. Let's say you need some additional packages for your apps or you need to add some CA certs, so create a Dockerfile and base from your Paketo run image of choice. You can then add customize it, build and publish to a registry.
+The next level is a custom Paketo run image. Let's say you need some additional packages for your apps or you need to add some CA certs, so create a Dockerfile and base from your Paketo run image of choice. You can then customize it, build and publish to a registry.
 
 Your users can then use the custom run image directly with the `--run-image` flag when building or you can create a custom builder with the Paketo build image and your custom run image.
 -->
 
 ---
 
-# Levels of Customization
+# Custom Run Image
 
-Custom Base Images
+Use a Dockerfile to customize:
 
-- Pick your base image
-- Customize it
-- Add CNB user/metadata
-- Push to OCI Registry
-- Repeat for the run image
-- Publish a custom builder
-// TODO: this is quite complicated for a single slide, is this worth the time to explain? Or should this just be a mention that you can do that
+![drop-shadow](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/dockerfile.png)
+
 <!--
-Custom build images are not the highest amount of customization, but they are a good bit of work. If you want to customize the build image, then you need to create your own build and run image set. This can be done with a standard Dockerfile and some custom metadata.
+This is a basic example, but it shows how you can start from the Paketo base image, make some customizations and produce a new image that can be used easily.
 
-For example, if you need to use your company's golden docker image for build and run images. You'd create a Dockerfile for the build image, a Dockerfile for the run image, both of which would base off your company's golden image, and then you'd add the CNB metadata. Finally, publish them to a registry and you have CNB suitable build + run images.
+Note how we're changing the user. That is required to do activities with elevated privileges because the Paketo base images change to the cnb user.
+-->
 
-Instructions for [build](https://buildpacks.io/docs/for-platform-operators/how-to/build-inputs/create-builder/build-base/) and [run](https://buildpacks.io/docs/for-platform-operators/how-to/build-inputs/create-builder/run-base/). Once you have those, you then create the [builder](https://buildpacks.io/docs/for-platform-operators/how-to/build-inputs/create-builder/builder/).
+---
+
+# Custom Run Image
+
+<div class="columns">
+<div class="column" style="margin-top: 1em;">
+
+Run Image
+
+![drop-shadow](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/run-image.png)
+
+</div>
+<div class="column" style="margin-top: 1em; margin-left: 1em;">
+
+App Image
+
+![drop-shadow](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/app-image.png)
+
+</div>
+
+<!--
+After you perform a build, you'll see that your application image now uses the custom run image. Looking at the image on the left, we can see the single layer for our run image. Looking at the image on the right, we can see the layers of our application image, and the first layer, that's the run image. The hash matches in each window, which proves they are using the same layer. Our custom run image.
 -->
 
 ---
 
 # Levels of Customization
 
-Custom Buildpacks
+## Custom Images
+
+- Totally different build + run images
+- A different base OS, distroless or alpine
+- Requires creating custom build and run images, plus a custom builder
+
+<!--
+Custom build images are a good bit of work. You need to create a custom build image, a custom run image, and a custom builder. 
+
+Creating the build and run image can be done with Dockerfile, but there is a particular process to it as CNB requires some metadata to be set. Fortunately, there are instructions for creating a [build image](https://buildpacks.io/docs/for-platform-operators/how-to/build-inputs/create-builder/build-base/) and [run image](https://buildpacks.io/docs/for-platform-operators/how-to/build-inputs/create-builder/run-base/). Once you have those, you then create the [builder](https://buildpacks.io/docs/for-platform-operators/how-to/build-inputs/create-builder/builder/).
+
+You will also need CI pipelines to repeat the build process & keep up-to-date when there are changes in your upstream image.
+-->
+
+---
+
+# Levels of Customization
+
+<div class="columns" style="margin-top: 1.5em">
+<div class="column">
+
+## Custom Buildpacks
 
 - Enforce requirements
 - Add files or resources to the image
-- Set env variables/embed env variables into image
+- Set env variables/embed env variables 
+into image
 - Custom image labels
 - Add CA certificates
 - Interact with other buildpacks
+
+</div>
+<div class="column">
+
+<div style="margin-top: 1.5em">
+
+![drop-shadow](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/buildpack-contents.png)
+
+</div>
+
+</div>
 
 <!--
 Custom buildpacks let you tap into the build process. You can do virtually anything with them. They have the power to break a build, so you can use them to enforce requirements. They can add layers, set env variables, add CA certificates, and interact with other buildpacks through the build plan.
@@ -524,11 +565,23 @@ A minimal buildpack is simple. You can write one with just a couple bash scripts
 Buildpacks can do almost anything though, but as you do more the complexity goes up and you may not want to implement them in bash scripts. Bash scripts can't be tested easily, and the complexity of them grows fast. You can write buildpacks in other languages too, although it helps to have one with a buildpacks SDK. There are buildpacks SDKs in Python, Go and Rust.
 
 If you notice, these are mostly statically compiled languages. That is because it's easier to ship buildpacks that way. If you use Python, or another language that requires a runtime, then your buildpacks will only run on a base image that includes a runtime for that language. Static binaries don't need an external runtime, so they are more versatile.
+
+You don't absolutely need CI pipelines for publishing your buildpacks, but it's a good idea. Especially, if you're using a language the produces static binaries as those binaries need to be updated whenever the runtime embedded in them needs updating.
+
+at any rate, creating buildpacks is a presentation all on its own. If you would like to know more info, feel free to chat with me after.
 -->
 
 ---
 
-# CI/CD Builds
+<!-- 
+_footer: Photo by <a href="https://unsplash.com/@simonkadula?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Simon Kadula</a> on <a href="https://unsplash.com/photos/a-factory-filled-with-lots-of-orange-machines-8gr6bObQLOI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+-->
+
+![bg left:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/simon-kadula-8gr6bObQLOI-unsplash.jpg)
+
+# Automating App Builds
+
+## CI/CD Support
 
 - `pack` cli runs in some CI/CD systems like GitHub Actions
 - `kpack` can build on top of Kubernetes
@@ -547,6 +600,12 @@ The only note with this last approach is that you will need to publish directly 
 
 ---
 
+<!-- 
+_footer: Photo by <a href="https://unsplash.com/@seanpollock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sean Pollock</a> on <a href="https://unsplash.com/photos/low-angle-photo-of-city-high-rise-buildings-during-daytime-PhYq704ffdA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+-->
+
+![bg left:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/sean-pollock-PhYq704ffdA-unsplash.jpg)
+
 # Enterprise Ready
 
 Paketo Buildpacks Support
@@ -555,6 +614,12 @@ Paketo Buildpacks Support
 - Proxies for Internet access
 - Local mirrors
 - Air Gapped Environments
+
+<!--
+Buildpacks are Enterprise ready. Many enterprises need things like proxy support for access to the Internet, or possibly to support a custom CA cert chain because their network intercepts TLS traffic to decrypt it. Paketo Buildpacks supports all of this.
+
+Some companies may not allow internet access at all, or certain parts of the company network may be air gapped. In these cases, Paketo has two options for you. You may run a local mirror for dependencies and a local registry for images. Another option that Paketo supports is to bundle dependencies into your buildpack images and use a local registry for images.
+-->
 
 ---
 
