@@ -130,9 +130,9 @@ Slides are available at the link above.
 <h2>What they are?</h2>
 <ul>
     <li>Source Code => OCI</li>
-    <li>Multiple Languages</li>
+    <li>Standard & specification</li>
+    <li>Support Multiple Languages</li>
     <li>Integrated into Platforms</li>
-    <li>A specification</li>
 </ul>
 
 </div>
@@ -162,7 +162,7 @@ What they are not:
 - They do not attempt to completely replace Dockerfiles. There are still some good use cases for Dockerfiles. They do replace Dockerfiles for use when it comes to building application containers.
 - They're not replacing CI/CD, although there are some common parts to both. Both build your app, both create artifacts. CNBs are usually integrated into your existing CI/CD pipelines some point after tests have run.
 - They're not a dev-only tool. They're great for Ops folks too, and that's what we're talking about today.
-- They're not an implementation. CNB does not provide a working set of buildpacks, which is where Paketo buildpacks come in. Paketo is an implementation of the CNB specification for most popular languages: Java, .NET, Python, Node.js, Ruby, Go, Rust, PHP, and Web Servers.
+- They're not an implementation. CNB does not provide a working set of buildpacks, which is where Paketo buildpacks come in. Paketo is an implementation of the CNB specification for most popular languages: Java, GraalVM, Scala, Kotlin, Clojure, Go, .NET, Node.js, Python, Ruby, Rust, PHP & web servers
 -->
 
 ---
@@ -174,7 +174,7 @@ What they are not:
 
 Technically:
 
-- A build + run executable 
+- A build + detect executable 
 - A metadata config file called `buildpack.toml`
 - Bundled as an OCI image
 
@@ -415,7 +415,7 @@ In addition, buildpacks support multiple architectures, so you can build app ima
 
 - Base images: <span style="font-family: San Francisco bold">Ubuntu Jammy</span>, <span style="font-family: San Francisco bold">Ubuntu Noble</span>, or <span style="font-family: San Francisco bold">UBI 8-10</span>
 - Four run image sizes: <span style="font-family: San Francisco bold">static, tiny, base & full</span>
-- Languages: <span style="font-family: San Francisco bold">Java, Java Native Image, Go, .NET, Node.js, Python, Ruby, Rust, & web servers</span>
+- Languages: <span style="font-family: San Francisco bold">Java, GraalVM, Scala, Kotlin, Clojure, Go, .NET, Node.js, Python, Ruby, Rust, PHP & web servers</span>
 - Buildpack-less builders too
 
 </div>
