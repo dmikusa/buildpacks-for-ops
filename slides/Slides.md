@@ -189,6 +189,26 @@ Technically:
 
 </div>
 
+---
+
+# Using Buildpacks
+
+<div class="columns" style="margin-top: 1.5em">
+<div class="column">
+
+- [Install pack](https://buildpacks.io/docs/for-platform-operators/how-to/integrate-ci/pack/)
+- Run `pack build`
+
+</div>
+<div class="column">
+
+<div style="margin-top: 1.5em">
+
+![drop-shadow](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/pack-build-run.png)
+
+</div>
+
+</div>
 
 ---
 <!-- 
@@ -256,7 +276,7 @@ The great thing about Buildpacks is that you don't have to hope. The buildpack a
 
 ---
 
-# Why should Ops care?
+# Why Should Ops Care?
 
 <!-- 
 _footer: Photo by <a href="https://unsplash.com/@cytonn_photography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cytonn Photography</a> on <a href="https://unsplash.com/photos/two-people-shaking-hands-n95VMLxqM2I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -264,12 +284,10 @@ _footer: Photo by <a href="https://unsplash.com/@cytonn_photography?utm_source=u
 
 ![bg left:40%](https://raw.githubusercontent.com/dmikusa/buildpacks-for-ops/refs/heads/main/slides/img/cytonn-photography-n95VMLxqM2I-unsplash.jpg)
 
-<div>&nbsp;</div>
-
-## App Problems == Ops Problems
-
 <!--
-The app team might write the Dockerfile, but the Ops teams are running these images or are running the platforms running these apps. When there are vulnerabilities or problems with the app, it's often the Ops teams that have to step in and help.
+Because these are not two separate problems. The term "DevOps" was coined for a reason. These tasks are intertwined.
+
+It might be that the app team might write the Dockerfile, but the Ops teams are running the platforms where these images or are running. It matters how those images are created. When there are vulnerabilities or problems with the app, everyone has to step in and help.
 -->
 
 ---
